@@ -2,7 +2,10 @@
 Sometimes we just forget how to use a tool. Here is a list of useful snippets for penetration testing and CTFs.
 
 * General
-	* nc/ncat
+	* Cryptography
+	* Forensics
+	* [Web](web.md)
+	* [Pwn/Reversing](pwn.md)
 	* nmap
 	* metasploit
 	* scapy
