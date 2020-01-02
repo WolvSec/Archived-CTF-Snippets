@@ -48,7 +48,7 @@
 
 <h3 id="open">Open Redirect</h3>
 
-	redirect_url=http%3A%2F%2Fevil.url # http://evil.url
+	http://evil.url
 
 <b>Upgrade to Response Splitting</b>
 
@@ -71,7 +71,6 @@
 <b>Sandbox Escape</b>
 
 <h3 id="xxe">XML External Entities</h3>
-	
 	
 
 <b>Local DTD files</b>
