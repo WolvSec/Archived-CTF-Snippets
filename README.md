@@ -1,14 +1,13 @@
 # Snippet Toolbox
 Sometimes we just forget how to use a tool. Here is a list of useful snippets for penetration testing and CTFs.
 
-* General
-	* Cryptography
-	* Forensics
-	* [Web](web.md)
-	* [Pwn/Reversing](pwn.md)
-	* nmap
-	* metasploit
-	* scapy
+* Cryptography
+* Forensics
+* [Web](web.md)
+* [Pwn/Reversing](pwn.md)
+* nmap
+* metasploit
+* scapy
 * [ARP](#arp)
 	* netdiscover
 * [DNS](#dns)
@@ -20,6 +19,13 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 	* DNSenum
 	* DNSrecon
 	* Sublist3r
+* [E-mail](#email)
+	* The Harvester
+* [http](#web)
+	* dirb/dirbuster
+	* nikto
+	* wpscan
+	* sqlmap
 * [Active Directory](#ad)
 	* Basics
 	* Enumeration
@@ -27,8 +33,6 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 	* Domain Privesc
 	* Persistence
 	* Trust Privesc
-* [E-mail](#email)
-	* The Harvester
 * [SNMP](#snmp)
 	* onesixtyone
 	* SNMPwalk
@@ -37,11 +41,6 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 	* smbclient
 	* smbmap
 	* enum4linux
-* [Web](#web)
-	* dirb/dirbuster
-	* nikto
-	* wpscan
-	* sqlmap
 * [Windows](#windows)
 	* cmd
 	* Powershell
@@ -465,7 +464,3 @@ Child to Forest Root
 	for i in is:
 		ip += hex(int(i))[2:].rjust(2, '0')
 	print ip
-
-<b>Pwntools</b>
-
-
