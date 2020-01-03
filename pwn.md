@@ -109,6 +109,34 @@ Command Line cheat sheet for binary exploitation
 
 <h3>Heap</h3>
 
+<h4>Off by one</h4>
+
+<h4>Chunk extension/Overlapping</h4>
+
+<h4>Unlink</h4>
+
+<h4>Use After Free</h4>
+
+<h4>Fastbin attack</h4>
+
+<h4>Unsorted bin attack</h4>
+
+<h4>Large bin attack</h4>
+
+<h4>Tcache attacks</h4>
+
+<h4>House of Einherjar</h4>
+
+<h4>House of Force</h4>
+
+<h4>House of Lore</h4>
+
+<h4>House of Orange</h4>
+
+<h4>House of Rabbit</h4>
+
+<h4>House of Roman</h4>
+
 <h3>FILE</h3>
 
 <h3>Integers</h3>

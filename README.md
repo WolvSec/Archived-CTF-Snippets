@@ -442,3 +442,12 @@ Child to Forest Root
 	for i in is:
 		ip += hex(int(i))[2:].rjust(2, '0')
 	print ip
+
+<b>Zlib decompress</b>
+
+	s = 'aloha'
+	b = bytearray.fromhex(s)
+	
+	f = open('elf', 'wb')
+	f.write(z)
+	f.close
