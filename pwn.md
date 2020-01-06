@@ -1,7 +1,6 @@
 # Native Application Exploitation aka Binary Exploitation aka Pwning
 Command Line cheat sheet for binary exploitation
 
-
 * [Templates](#templates)
 * MacOS
 * Linux

@@ -5,6 +5,7 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 * Forensics
 * [Web](web.md)
 * [Pwn/Reversing](pwn.md)
+* [tmux](#tmux)
 * nmap
 * metasploit
 * scapy
@@ -57,6 +58,12 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 <h2 id="general">General</h2>	
 
 	du -hs directory/
+
+<h3 id="tmux">Tmux</h3>
+
+	#Enable mouse (Cannot copy past anymore)
+	set-window-option -g mode-mouse on
+	set -g mouse-select-pane on
 
 <h3 id="ncat">ncat</h3>	
 
