@@ -58,6 +58,7 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 <h2 id="general">General</h2>	
 
 	du -hs directory/
+	cut -b 7- rpcclientusers | cut -d "]" #Parse list from enumuserinfo
 
 <h3 id="tmux">Tmux</h3>
 
