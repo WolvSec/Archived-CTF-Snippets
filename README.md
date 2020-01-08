@@ -125,6 +125,10 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 	nmap -p- 10.10.10.10
 	nmap -6 [:] #ipv6
 
+	#Fast scanning all ports
+	masscan -p1-65535,U:1-65535 127.0.0.1 --rate=1000 -e tun0
+	nmap -T5 --open -sS -vvv --min-rate=1000 --max-retries=2 -p- -oA full-ports 10.10.10.x	
+
 <b>Advanced</b>
 	
 	nmap -f 10.10.10.10 #fragments
