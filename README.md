@@ -65,6 +65,25 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 	set-window-option -g mode-mouse on
 	set -g mouse-select-pane on
 
+	#Change ssh config (Kali linux)
+	vim /etc/ssh/ssd_config
+	PermitRootLogin yes
+
+<h3 id="fortinet">Fortinet</h3>
+
+	./forticlientsslvpn_cli --server server:443 --vpnuser aloha < password
+
+<h3 id="vbox">Virtual Box</h3>
+
+	#Enable ssh on guest machine (Mac)
+	ifconfig vboxnet0
+	
+	auth eth1
+	iface eth1
+	address 192.168.56.10
+	netmast 255.255.255.0
+	sudo ifup eth1	
+
 <h3 id="ncat">ncat</h3>	
 
 	rlwrap nc -nvvv 127.0.0.1 4444
