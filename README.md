@@ -24,6 +24,7 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 	* The Harvester
 * [http](#web)
 	* dirb/dirbuster
+	* [gobuster](#gobuster)
 	* nikto
 	* wpscan
 	* sqlmap
@@ -46,6 +47,7 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 	* cmd
 	* Powershell
 	* WMIC
+	* [evil-winrm](#winrm)
 	* [winpeas](#winpeas) [link](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS)
 	* [Empire](#)
 * [NIX](#nix)
@@ -281,6 +283,10 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 	
 	dirb http://10.10.10.10 /usr/share/dirb/wordlists
 
+<h3 id="gobuster">Gobuster</h3>
+
+	gobuster dir -u https://127.0.0.1 -x .php,.html
+
 <h3 id="nikto">Nikto</h3>
 	
 	nikto -h http://10.10.10.10
@@ -339,6 +345,10 @@ Child to Forest Root
 
 <h2 id="windows">Windows</h2>
 
+<h3 id="winrm">Evil WinRm</h3>
+Port 5985
+
+	evil-winrm -i 127.0.0.1 -u aloha -p aloha123
 
 <h3 id="winprivesc">Windows Privilege Escalation</h3>
 
