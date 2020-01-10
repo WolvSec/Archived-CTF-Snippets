@@ -94,7 +94,7 @@
 		<body>
 			<script>history.pushState('', '', '/')</script>
 				<form action="https://127.0.0.1/vulnerable/endpoint?param=value1&param2=value2" method="POST">
-					<innput type="submit" value="Submit request" />
+					<input type="submit" value="Submit request" />
 				</form>
 		</body>
 	</html>
@@ -106,7 +106,7 @@
 				<form action="https://127.0.0.1/vulnerable/endpoint" method="POST">
 					<input type="hidden" name="param1" value="value1" />
 					<input type="hidden" name="param2" value="value2" />
-					<innput type="submit" value="Submit request" />
+					<input type="submit" value="Submit request" />
 				</form>
 		</body>
 	</html>
@@ -117,7 +117,7 @@
 			<script>history.pushState('', '', '/')</script>
 				<form action="https://127.0.0.1/vulnerable/endpoint" method="POST">
 					<input name='{"param1":"value1", "param2":"'value='"}'>
-					<innput type="submit" value="Submit request" />
+					<input type="submit" value="Submit request" />
 				</form>
 		</body>
 	</html>
