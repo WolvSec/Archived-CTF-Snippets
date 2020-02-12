@@ -16,6 +16,7 @@ Command Line cheat sheet for binary exploitation
 	* Stack
 	* Kernel
 * [Browser](browser.md)
+* [Misc](#misc)
 
 <h2 id="templates">Exploit template</h2>
 
@@ -42,9 +43,20 @@ Command Line cheat sheet for binary exploitation
 		if not args.REMOTE:
 			print "LOCAL PROCESS"
 			return process(BINARY)
+		if not args.REMOTE and args.GDB:
+			debugg(['*main'])
 		else:
 			print "REMOTE PROCESS"
 			return remote(HOST, PORT)
+
+	def get_base_address(proc):
+		return int(open("/proc/{}/maps".format(proc.pid), 'rb').readlines()[0].split('-')[0], 16)
+
+	def debug(breakpoints):
+		script = ""
+		for bp in breakpoints:
+			script += "b *0x%x\n"%(PIE+bp)
+		gdb.attach(process(BINARY), gdbscript=script)
 
 	
 	def sample_function(data):
@@ -143,3 +155,7 @@ Command Line cheat sheet for binary exploitation
 <h3>Race Conditions</h3>
 
 <h3>Kernel</h3>
+
+<h2 id="misc">Misc</h2>
+
+
