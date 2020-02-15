@@ -158,4 +158,7 @@ Command Line cheat sheet for binary exploitation
 
 <h2 id="misc">Misc</h2>
 
+	# Debug Macho binaries (by mgrube)
+	codesign --remove-signature app.app
+	xattr -r -d app.app
 
