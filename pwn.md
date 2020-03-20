@@ -21,33 +21,22 @@ Command Line cheat sheet for binary exploitation
 <h2 id="templates">Exploit template</h2>
 
 <h4>Python</h4>
-
+	
 	#!/usr/bin/env python
 	
 	from pwn import *
 
-	BINARY = './vuln'
-	HOST, PORT = '8.8.8.8', 1337
-
+	BINARY = './library_in_c'
+	LIBC = './libc.so.6'
+	HOST = 'shell.actf.co'
+	PORT = 20201
+	
 	elf = ELF(BINARY)
 	libc = ELF('./libc.so.6')
 
-	context.arch = 'amd64'
-	context.terminal = ['tmux', 'new-window']
-
-	printf = elf.plt['printf']
-	free_got = elf.got['free']
-	malloc_hook = libc.sym['__malloc_hook']
-
-	def start():
-		if not args.REMOTE:
-			print "LOCAL PROCESS"
-			return process(BINARY)
-		if not args.REMOTE and args.GDB:
-			debugg(['*main'])
-		else:
-			print "REMOTE PROCESS"
-			return remote(HOST, PORT)
+	context.terminal = ['tmux', 'split-w']
+	
+	printf = elf.got['printf']		
 
 	def get_base_address(proc):
 		return int(open("/proc/{}/maps".format(proc.pid), 'rb').readlines()[0].split('-')[0], 16)
@@ -58,16 +47,26 @@ Command Line cheat sheet for binary exploitation
 			script += "b *0x%x\n"%(PIE+bp)
 		gdb.attach(process(BINARY), gdbscript=script)
 
-	
-	def sample_function(data):
-		p.sendlineafter('>> ', '1')
-		p.sendafter(':\n', data)
-	
-	
-	while True:
-		p = start()	
+	def start():
+	    if not args.REMOTE:
+		print "LOCAL PROCESS"
+		return process(BINARY, env={"LD_PRELOAD":LIBC))
+	    else:
+		print "REMOTE PROCESS"
+		return remote(HOST, PORT)
+
+
+	p = start()
+	if args.GDB:
+	    gdb.attach(p, 'b main')
 
 	p.interactive()
+
+
+
+
+
+
 
 <h4>Ruby</h4>
 	
@@ -162,3 +161,13 @@ Command Line cheat sheet for binary exploitation
 	codesign --remove-signature app.app
 	xattr -r -d app.app
 
+	# Quick pwn setup
+
+	apt update
+	sudo apt install wget
+	apt install gdb
+	apt install python
+	apt install wget
+	apt install net-tools
+	wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
+	apt install tmux
