@@ -175,5 +175,6 @@ Command Line cheat sheet for binary exploitation
 	apt install ruby
 	apt install tmux
 	pip install capstone
+	pip install pwntools
 	pip install ropgadget
 	gem install one_gadget
