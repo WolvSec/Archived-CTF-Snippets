@@ -166,8 +166,12 @@ Command Line cheat sheet for binary exploitation
 	apt update
 	sudo apt install wget
 	apt install gdb
+	wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
 	apt install python
 	apt install wget
 	apt install net-tools
-	wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
+	apt install ruby
 	apt install tmux
+	pip install capstone
+	pip install ropgadget
+	gem install one_gadget
