@@ -168,6 +168,7 @@ Command Line cheat sheet for binary exploitation
 	apt install gdb
 	wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
 	apt install python
+	apt install pip
 	apt install wget
 	apt install net-tools
 	apt install ruby
