@@ -101,6 +101,7 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 	set lport 4444
 	set payload linux/x86/shell_reverse_tcp
 	run
+	    run -j -- to run as a job automatically
 
 	#Method 1
 	CTRL+Z
@@ -290,6 +291,26 @@ Sometimes we just forget how to use a tool. Here is a list of useful snippets fo
 <h3 id="nikto">Nikto</h3>
 	
 	nikto -h http://10.10.10.10
+
+<h3 id="curl">cURL</h3>
+
+    HTTP Header info
+    curl -i http(s)://10.10.10.10
+    curl --include
+
+    Use soecific request METHOD like POST or PUT
+    curl -X POST http(s)://10.10.10.10
+
+    Grab everything from website 
+    curl -i -L 10.11.1.111
+
+    Ignore TLS on https websites 
+    curl --insecure https://10.10.10.10
+
+<h3 id="powershell_web">Powershell</h3>
+
+    Invoke-WebRequest http(s)://10.10.10.10
+    Invoke-WebRequest -METHOD 'POST' http(s)://10.10.10.10
 
 <h3 id="burp">Burpsuite</h3>
 
