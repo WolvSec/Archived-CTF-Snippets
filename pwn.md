@@ -178,3 +178,8 @@ Command Line cheat sheet for binary exploitation
 	pip install pwntools
 	pip install ropgadget
 	gem install one_gadget
+
+	# gdb LD_PRELOAD 
+
+	set exec-wrapper env 'LD_PRELOAD=./libc.so.6'
+	set env LD_PRELOAD ./libc.so.6
