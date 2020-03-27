@@ -179,15 +179,15 @@ Command Line cheat sheet for binary exploitation
 
 	apt update
 	sudo apt install wget
-	apt install gdb
+	apt install --assume-yes gdb
 	wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
-	apt install python
-	apt install vim
-	apt install python-pip
-	apt install wget
-	apt install net-tools
-	apt install ruby
-	apt install tmux
+	apt install --assume-yes python
+	apt install --assume-yes vim
+	apt install --assume-yes python-pip
+	apt install --assume-yes wget
+	apt install --assume-yes net-tools
+	apt install --assume-yes ruby
+	apt install --assume-yes tmux
 	pip install capstone
 	pip install pwntools
 	pip install ropgadget
