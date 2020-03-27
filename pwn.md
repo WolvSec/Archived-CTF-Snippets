@@ -50,7 +50,7 @@ Command Line cheat sheet for binary exploitation
 	def start():
 	    if not args.REMOTE:
 		print "LOCAL PROCESS"
-		return process(BINARY, env={"LD_PRELOAD":LIBC))
+		return process(BINARY, env={"LD_PRELOAD":LIBC})
 	    else:
 		print "REMOTE PROCESS"
 		return remote(HOST, PORT)
@@ -61,11 +61,6 @@ Command Line cheat sheet for binary exploitation
 	    gdb.attach(p, 'b main')
 
 	p.interactive()
-
-
-
-
-
 
 
 <h4>Ruby</h4>
@@ -81,11 +76,7 @@ Command Line cheat sheet for binary exploitation
 	z.recvuntil "Let's start the CTF:"
 	z.send p64(0x1337).rjust(0x18, 'A')
 	
-
 	z.interact
-
-	
-
 
 <h2 id="linux">Linux</h2>
 
@@ -154,6 +145,29 @@ Command Line cheat sheet for binary exploitation
 <h3>Race Conditions</h3>
 
 <h3>Kernel</h3>
+	
+	# List kernel modules
+	lsmod
+	
+	# Insert LKM
+	insmod <filename> param1=1 array_param=1,2
+	modprobe <module>
+	
+	# Remove LKM
+	rmmod <module> 
+	rmmod -f <module> #Force remove
+	modprobe -r <module>
+	
+	# Debugging symbols
+	nm <module>
+
+	# View printk output
+	dmesg
+	
+	# View inode
+	ls -i <file>
+	stat <file>
+
 
 <h2 id="misc">Misc</h2>
 
