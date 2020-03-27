@@ -197,3 +197,15 @@ Command Line cheat sheet for binary exploitation
 
 	set exec-wrapper env 'LD_PRELOAD=./libc.so.6'
 	set env LD_PRELOAD ./libc.so.6
+
+	# Linux Dockers
+
+	debian:latest
+	pwndocker:latest
+	glibc2.23-pwn:latest
+	
+	# When using old ubuntu versions
+
+	gedit /etc/apt/sources.list
+	deb http://old-releases.ubuntu.com/ubuntu karmic main restricted
+	
