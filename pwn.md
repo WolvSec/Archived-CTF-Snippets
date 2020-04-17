@@ -32,11 +32,11 @@ Command Line cheat sheet for binary exploitation
 	PORT = 20201
 	
 	elf = ELF(BINARY)
-	libc = ELF('./libc.so.6')
+	#libc = ELF('./libc.so.6')
 
 	context.terminal = ['tmux', 'split-w']
 	
-	printf = elf.got['printf']		
+	#printf = elf.got['printf']		
 
 	def get_base_address(proc):
 		return int(open("/proc/{}/maps".format(proc.pid), 'rb').readlines()[0].split('-')[0], 16)
@@ -49,10 +49,10 @@ Command Line cheat sheet for binary exploitation
 
 	def start():
 	    if not args.REMOTE:
-		print "LOCAL PROCESS"
+		print("LOCAL PROCESS")
 		return process(BINARY, env={"LD_PRELOAD":LIBC})
 	    else:
-		print "REMOTE PROCESS"
+		print("REMOTE PROCESS")
 		return remote(HOST, PORT)
 
 
