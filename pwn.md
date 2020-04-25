@@ -183,6 +183,7 @@ Command Line cheat sheet for binary exploitation
 	wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
 	apt install --assume-yes python
 	apt install --assume-yes vim
+	apt install --assume-yes python3-pip
 	apt install --assume-yes python-pip
 	apt install --assume-yes wget
 	apt install --assume-yes net-tools
