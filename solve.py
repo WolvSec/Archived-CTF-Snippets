@@ -4,12 +4,13 @@
 from pwn import *
 
 BINARY = './bin'
+ARGS = ''
 LIBC = './libc.so.6'
-HOST = 'aloha.com'
+HOST  = 'aloha.com'
 PORT = 1337
 
-elf = ELF(BINARY)
-#libc = ELF(LIBC)
+elf = ELF(BINARY, checksec=FALSE)
+#libc = ELF(LIBC, checksec=FALSE)
 
 context.terminal = ['tmux', 'split-w']
 
@@ -27,7 +28,7 @@ def debug(breakpoints):
 def start():
 	if not args.REMOTE:
 		print("LOCAL PROCESS")
-		return process(BINARY, env={"LD_PRELOAD":LIBC})
+		return process([BINARY, ARGS], env={"LD_PRELOAD":LIBC})
 	else:
 		print("REMOTE PROCESS")
 		return remote(HOST, PORT)
