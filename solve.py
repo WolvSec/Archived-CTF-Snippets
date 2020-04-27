@@ -36,11 +36,11 @@ def start():
 def write(addr, value):
 	p.sendlineafter("", "1")
 	p.sendlineafter("", addr)
-	p.sendlineafter("", value)
+	p.sendafter("", value)
 
 def read(addr):
 	p.sendlineafter("", "2")
-	p.sendlineafter("", addr)
+	p.sendafter("", addr)
 
 p = start()
 if args.GDB:
