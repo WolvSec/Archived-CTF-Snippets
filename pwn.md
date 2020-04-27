@@ -23,6 +23,7 @@ Command Line cheat sheet for binary exploitation
 <h4>Python</h4>
 	
 	#!/usr/bin/env python
+	# -*- coding: utf-8 -*- 
 	
 	from pwn import *
 
