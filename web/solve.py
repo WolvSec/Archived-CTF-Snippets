@@ -43,7 +43,14 @@ def read(addr):
 	p.sendlineafter("", "2")
 	p.sendafter("", addr)
 
-def 
+def generateCSRF(method, parameters):
+	#Generate html code
+
+def spawnWebServer(port):
+	#Spawn http server at port $port
+
+# Generate CSRF payload
+# Host web server
 	
 
 p = start()
