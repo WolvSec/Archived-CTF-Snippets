@@ -211,3 +211,7 @@ Command Line cheat sheet for binary exploitation
 	gedit /etc/apt/sources.list
 	deb http://old-releases.ubuntu.com/ubuntu karmic main restricted
 	
+<h3>Qemu</h3>
+	
+	# GDB debugging
+	
